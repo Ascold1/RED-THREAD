@@ -272,7 +272,7 @@
                    <div class="contactform_subtitle">Наш менеджер свяжеться с 
 вами в течении 15 минут 
 и уточнит детали.</div>
-                   <form action="" id="sendform">
+                   <form action="" method="post" action="" id="sendform">
                       <ul class="radiogroup">
                           <li class="radiogroup_item">
                                <input name="radio" type="radio" id="radio1" class="sendform_radio">
@@ -290,9 +290,9 @@
                                <div class="check"><div class="inside"></div>
                             </li>
                        </ul>
-                       <input type="text" class="sendform_input" placeholder="Ваше имя *">
-                       <input type="phone" class="sendform_input" placeholder="Ваш телефон *">
-                       <button type="submit" class="button sendform_button">ЗАКАЗАТЬ</button>
+                       <input type="text" name="name" class="sendform_input" placeholder="Ваше имя *">
+                       <input type="phone" name="phone" class="sendform_input" placeholder="Ваш телефон *">
+                       <button type="submit" name="send" class="button sendform_button">ЗАКАЗАТЬ</button>
                    </form>
                </div>
            </div>
