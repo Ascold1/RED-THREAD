@@ -35,7 +35,7 @@
 			<div class="wrapper-2">
 				<div class="header_top_container">
 					<div class="header__right">
-					    <a href="#" class="header_top_number">
+					    <a href="#contactform" class="header_top_number">
 					        <span class="top_numper_num">+38 093 710 79 13</span>
 					        <span class="top_number_title">заказать обратный звонок</span>
 					    </a>
@@ -46,7 +46,7 @@
 		<div class="wrapper">
 			<div class="header_main">
 				<div class="header_main_block">
-				    <div class="header_logo_link"><img src="img/logo.png" alt="" class="header_logo"></div>
+				    <div class="header_logo_link"><a href="#" class="logo_link"><img src="img/logo.png" alt="" class="header_logo img-responsive"></a></div>
 					<h1 class="header_title">
 					   <span class="accent">Красная</span> нить из Иерасулима
 					</h1>
@@ -55,8 +55,8 @@
 Направляет своего владельца по правильному жизненному пути!
 Помогает развиваться, достигать новых высот в карьере и лечит!
 					</h2>
-					<a href="#" class="button header_button">ЗАКАЗАТЬ</a>
-					<a href="#" class="header_button_down">
+					<a href="#contactform" class="button header_button">ЗАКАЗАТЬ</a>
+					<a href="#numbers" class="header_button_down">
 					    <img src="img/down.png" alt="" class="icondown">
 				    </a>
 				</div>
@@ -66,7 +66,7 @@
 	<!--HEADER END-->
 	<!--MAIN START-->
 	<main class="main">
-       <section class="section__numbers">
+       <section class="section__numbers" id="numbers">
         <div class="wrapper">
             <div class="section_title">	
             О НАС В ЦИФРАХ
@@ -125,6 +125,7 @@
                        <p>За основу будущего талисмана берутся тонкие красные шерстянные нити. Именно красный цвет в каббале символизирует защиту от негативной энергетики и дурного глаза.</p>
                        <p>Священник с помощником во время чтения специальной защитной молитвы (Ана Бекоах) 7 раз оборачивают красные нити вокруг святыни, и только после этого ниточки нарезаются под размер запястья и готовы к использованию людьми во всем мире.</p>
                    </div>
+                   
                </div>
            </div>
        </section>
@@ -159,7 +160,7 @@
                            <span class="complect">1 закладка с молитвой</span>
                            <span class="complect">1 инстукция по подготовке</span>
                        </div>
-                       <a href="#" class="button buy_button">Заказать</a>
+                       <a href="#contactform" class="button buy_button">Заказать</a>
                    </div>
                    <div class="price_item">
                        <div class="price_item_title">ДЛЯ ДВОИХ</div>
@@ -171,7 +172,7 @@
                            <span class="complect">2 закладки с молитвой</span>
                            <span class="complect">2 инстукции по подготовке</span>
                        </div>
-                       <a href="#" class="button buy_button">Заказать</a>
+                       <a href="#contactform" class="button buy_button">Заказать</a>
                    </div>
                    <div class="price_item">
                        <div class="price_item_title">ПОДАРОЧНАЯ </div>
@@ -183,7 +184,7 @@
                            <span class="complect">3 закладки с молитвой</span>
                            <span class="complect">3 инстукции по подготовке</span>
                        </div>
-                       <a href="#" class="button buy_button">Заказать</a>
+                       <a href="#contactform" class="button buy_button">Заказать</a>
                    </div>
                </div>
            </div>
@@ -263,7 +264,7 @@
                </div>
            </div>
        </section>
-       <section class="section__contact_form">
+       <section class="section__contact_form" id="contactform">
            <div class="wrapper">
                <div class="contactform_wrapper">
                    <div class="section_title">ОСТАВЬТЕ ЗАЯВКУ</div>
@@ -272,11 +273,25 @@
 вами в течении 15 минут 
 и уточнит детали.</div>
                    <form action="" id="sendform">
-                       <label class="radio_text" for="radio1"><input name="radio" type="radio" class="sendform_radio radio1">ДЛЯ СЕБЯ</label>
-                       <label class="radio_text" for="radio2"><input name="radio" type="radio" class="sendform_radio radio2">ДЛЯ ДВОИХ</label>
-                       <label class="radio_text" for="radio3"><input name="radio" type="radio" class="sendform_radio radio3">ПОДАРОЧНАЯ</label>
-                       <input type="text" class="sendform_input">
-                       <input type="phone" class="sendform_input">
+                      <ul class="radiogroup">
+                          <li class="radiogroup_item">
+                               <input name="radio" type="radio" id="radio1" class="sendform_radio">
+                               <label class="radio_text" for="radio1">ДЛЯ СЕБЯ</label>
+                               <div class="check"><div class="inside"></div>
+                           </li>
+                           <li class="radiogroup_item">
+                               <input name="radio" id="radio2" type="radio" class="sendform_radio radio2">
+                               <label class="radio_text" for="radio2">ДЛЯ ДВОИХ</label>
+                               <div class="check"><div class="inside"></div>
+                            </li>
+                           <li class="radiogroup_item">
+                               <input name="radio" id="radio3" type="radio" class="sendform_radio radio3">
+                               <label class="radio_text" for="radio3">ПОДАРОЧНАЯ</label>
+                               <div class="check"><div class="inside"></div>
+                            </li>
+                       </ul>
+                       <input type="text" class="sendform_input" placeholder="Ваше имя *">
+                       <input type="phone" class="sendform_input" placeholder="Ваш телефон *">
                        <button type="submit" class="button sendform_button">ЗАКАЗАТЬ</button>
                    </form>
                </div>

@@ -101,15 +101,19 @@ body{
 .header_main{
     margin-top: 87px;
 }
-.header_logo{
-    display: block;
+.logo_link{
+    display: table;
     margin: 0 auto;
+}
+.header_logo{
+   display: block;
 }
 
 .header_main_block{
     padding-bottom: 100px;
 }
 .header_title{
+    text-align: center;
     margin-top: 93px;
     font-family: "PT Sans";
     font-size: 70px;
@@ -192,7 +196,7 @@ body{
     justify-content: space-between;
 }
 .whatis__left, .whatis__right{
-    width: 50%;
+   // width: 50%;
 }
 .whatis__right,.interesting__right{
     margin-left: 50px;
@@ -369,7 +373,7 @@ body{
 }
 .whatsays_slider{
     margin: 45px auto 0;
-    max-width: 700px;
+    max-width: 800px;
     position: relative;
 }
 .whatsays_slide{
@@ -379,7 +383,7 @@ body{
     border: 1px solid #d8d8d8;
     background-color: #f7f7f7;
     max-width: 370px;
-    box-sizing: border-box;
+    //box-sizing: border-box;
     margin: 0 15px;
 }
 .slide_top{
@@ -390,13 +394,18 @@ body{
 }
 .author_photo{
     display:block;
-    width: 70px;
-    height: 70px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
     border: 1px solid #d8d8d8;
     border-radius: 50%;
-    overflow: hidden;
     background-color: #d8d8d8;   
+    width: 70px;
+    height: 70px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.author_img{
+    width: 70px;
+    height: 70px;
 }
 .author_name{
     display: block;
@@ -466,7 +475,6 @@ font-weight: 400;
     padding: 60px 120px;
 }
 .contactform_separator{
-    max-width: 212px;
     height: 1px;
     background-color: #fb6a63;
     margin: 20px auto 0;
@@ -485,24 +493,74 @@ font-weight: 400;
     flex-direction: column;
     
 }
+.radiogroup{
+      display: flex;
+    flex-direction: column;
+}
+.radiogroup_item{
+    position: relative;
+    margin-top: 55px;
+    height: 20px;
+    display: flex; 
+    flex-direction: row;
+    &:first-child{
+        margin-top: 0;
+    }
+    &:hover .radio_text{
+        color: lighten(#000, 20%);
+    }
+}
 .radio_text{
+    display: block;
+    position: relative;
     color: #000000;
     font-family: "PT Sans";
     font-size: 20px;
     font-weight: 700;
+    padding-left: 65px;
+    z-index: 10;
 }
-.sendform_radio{
+.check{
+    border: 1px solid transparent;
+    
+    display: block;
+    position: absolute;
+     width: 24px;
+    height: 24px;
+    outline: 0;
+    border-radius: 50%;
+    top: 2px;
+    left: 0;
+	z-index: 5;
+	transition: border .25s linear;
+}
+.inside{
+    margin: 4px auto;
     width: 16px;
     height: 16px;
+    border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    background-color: #fc473e;
-    outline: 0;
-    margin-right: 40px;
-    margin-top: 55px;
+    background-color: #d7d7d7;
+   
+}
+.sendform_radio{
+     position: absolute;
+    visibility: hidden;
+    
+    
+    &:checked ~ .check{
+        box-shadow: 0 0 13px rgba(252, 71, 62, 0.69);
+        border: 1px solid #fc473e;
+    }
+    &:checked ~ .check .inside{
+        box-shadow: 0 0 13px rgba(252, 71, 62, 0.69);
+        background-color: #fc473e;
+    }
 }
 .sendform_input{
+    text-align: center;
     margin-top: 35px;
-    padding: 10px;
+    padding: 10px 15px;
     outline: 0;
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
@@ -527,8 +585,14 @@ font-weight: 400;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+.gallery_item{
+     border:  1px solid transparent;
+}
 .gallery_link{
-    outline: 0;
+    outline:0;
+}
+.gallery_img{
+    width: 100%;
 }
 .footer{
     background-color: #3a3a3a;
