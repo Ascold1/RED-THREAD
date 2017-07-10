@@ -1,4 +1,5 @@
 ;"use strict";
+new WOW().init();
 $(document).ready(function(){
    // Пользовательские функции 
    $(".whatsays_slider").slick({
@@ -27,4 +28,23 @@ $(document).ready(function(){
        
    });
     $(".gallery_link").fancybox();
+    // jQeury smooth scroll
+   $(".header_main_block").on("click","a", function (event) {
+         event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body, html').animate({scrollTop: top}, 1500);
+   });
+    $(".buy_price_container").on("click","a", function (event) {
+         event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body, html').animate({scrollTop: top}, 1500);
+   });
+    $(".header__top").on("click","a", function (event) {
+         event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body, html').animate({scrollTop: top}, 1500);
+   });
 });

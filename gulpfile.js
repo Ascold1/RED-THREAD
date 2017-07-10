@@ -35,7 +35,8 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/jquery/dist/jquery.min.js',
         'app/libs/slick-carousel/slick/slick.min.js',
         'app/libs/fancybox/dist/jquery.fancybox.min.js',
-        'app/libs/slicknav/dist/jquery.slicknav.min.js'
+        'app/libs/slicknav/dist/jquery.slicknav.min.js',
+        'app/libs/wow/dist/wow.min.js'
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)

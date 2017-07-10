@@ -72,6 +72,7 @@ body{
 	background-size:cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.6);
+    height:100vh;
 	width:100%;
 }
 
@@ -84,7 +85,7 @@ body{
     
 }
 .header_top_number{
-     margin-top: 80px;
+     margin-top: 1vh;
     display: flex;
     flex-direction: column;
 }
@@ -99,7 +100,7 @@ body{
 }
 
 .header_main{
-    margin-top: 87px;
+    margin-top: 10vh;
 }
 .logo_link{
     display: table;
@@ -114,7 +115,7 @@ body{
 }
 .header_title{
     text-align: center;
-    margin-top: 93px;
+    margin-top: 5vh;
     font-family: "PT Sans";
     font-size: 70px;
     font-weight: 700;
@@ -139,12 +140,12 @@ body{
     margin: 27px auto 0;
 }
 .header_button{
-    margin: 115px  auto 0;
+    margin: 5vh  auto 0;
 }
 
 .header_button_down{
     display: block;
-    margin: 100px 0 0;
+    margin: 4vh 0 0;
 }
 .icondown{
      display: block;
@@ -155,6 +156,7 @@ body{
 .section__numbers{
     padding: 70px 0;
     background-color: #f7f7f7;
+    z-index: -1;
 }
 .numbers_grid{
     display: flex;
@@ -200,7 +202,8 @@ body{
 }
 .whatis__right,.interesting__right{
     margin-left: 50px;
-    padding: 25px 0;
+    //padding: 25px 0;
+    align-self: center;
 }
 .whatis_title,.interesting_title{
     text-align: left;
@@ -245,7 +248,7 @@ body{
     margin-top: 15px;
 }
 .features_block_text{
-    margin-top: 40px;
+    margin-top: 20px;
     color: #000000;
     font-family: "PT Sans";
     line-height: 20px;
@@ -284,7 +287,7 @@ body{
     font-weight: 400;
 }
 .buy_price_container{
-    margin-top: 90px;
+    margin-top: 70px;
     display: flex;
     justify-content: center;
 }
@@ -454,7 +457,7 @@ body{
     font-weight: 700;
     p{
         font-size: 16px;
-font-weight: 400;
+        font-weight: 400;
     }
 }
 .answer_text_item{
@@ -499,7 +502,7 @@ font-weight: 400;
 }
 .radiogroup_item{
     position: relative;
-    margin-top: 55px;
+    margin-top: 50px;
     height: 20px;
     display: flex; 
     flex-direction: row;
@@ -559,7 +562,7 @@ font-weight: 400;
 }
 .sendform_input{
     text-align: center;
-    margin-top: 35px;
+    margin-top: 50px;
     padding: 10px 15px;
     outline: 0;
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.05);
@@ -599,7 +602,7 @@ font-weight: 400;
     padding: 35px 0;
 }
 .footer_container{
-    display: flex;
+    display: flex; 
     justify-content: space-between;
     align-items: center;
 }
