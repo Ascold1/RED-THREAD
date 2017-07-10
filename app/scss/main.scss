@@ -71,13 +71,20 @@ body{
 .header{
 	background-size:cover;
     background-position: center;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: lighten(rgba(0, 0, 0, 0.6),10%);
+    background-blend-mode:screen;
     height:100vh;
 	width:100%;
+    padding: 1vh 0;
+    box-sizing: border-box;
+    position: relative;
+    display: table;
 }
 
 .header__top{
     width: 100%;
+    display: table-row;
+    vertical-align:top;
 }
 .header_top_container{
 	display:flex;
@@ -85,7 +92,7 @@ body{
     
 }
 .header_top_number{
-     margin-top: 1vh;
+     
     display: flex;
     flex-direction: column;
 }
@@ -100,7 +107,7 @@ body{
 }
 
 .header_main{
-    margin-top: 10vh;
+    margin-top: 1vh;
 }
 .logo_link{
     display: table;
@@ -111,7 +118,9 @@ body{
 }
 
 .header_main_block{
-    padding-bottom: 100px;
+    display: table-cell;
+    vertical-align: middle;
+
 }
 .header_title{
     text-align: center;
@@ -140,7 +149,7 @@ body{
     margin: 27px auto 0;
 }
 .header_button{
-    margin: 5vh  auto 0;
+    margin: 5vh  auto calc(1vh + 60px);
 }
 
 .header_button_down{
@@ -148,6 +157,9 @@ body{
     margin: 4vh 0 0;
 }
 .icondown{
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 40px);
      display: block;
     margin: 0 auto;
 }
@@ -157,6 +169,7 @@ body{
     padding: 70px 0;
     background-color: #f7f7f7;
     z-index: -1;
+    border-bottom: 1px solid #d8d8d8;
 }
 .numbers_grid{
     display: flex;
@@ -177,19 +190,23 @@ body{
 }
 .numbers_num{
     position: absolute;
-    z-index: 10;
-    color: rgba(252, 71, 62, 0.55);;
-    text-shadow: 0 0 32px rgba(252, 71, 62, 0.35);
+    z-index: 9;
+    color: rgba(252, 71, 62, 1);;
+    text-shadow: 0 0 32px rgba(252, 71, 62, 1);
     font-family: "PT Sans";
     font-size: 80px;
     font-weight: 700;
     top:-40px;
     left:-10px;
 }
+.numbers_icon{
+    z-index: 10;
+}
 //WHAT IS
 .section__whatis,.section__interesting{
     background-color: #fff;
     padding: 40px 0;
+    border-bottom: 1px solid #d8d8d8;
 }
 .whatis_container,.interesting_container{
     display: flex;
@@ -271,6 +288,7 @@ body{
 .section__buy{
     padding: 70px 0 90px;
     background-color: #f7f7f7;
+    border-bottom: 1px solid #d8d8d8;
 }
 .separator_buy{
     max-width: 407px;
@@ -359,6 +377,7 @@ body{
 .section__whatsays{
     background-color: #ffffff;
     padding: 60px 0;
+    border-bottom: 1px solid #d8d8d8;
 }
 .separator_whatsays{
     max-width: 217px;
@@ -400,15 +419,15 @@ body{
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
     border: 1px solid #d8d8d8;
     border-radius: 50%;
-    background-color: #d8d8d8;   
+    background-color: #fff;   
     width: 70px;
     height: 70px;
+    padding: 5px 0;
     box-sizing: border-box;
     overflow: hidden;
-}
-.author_img{
-    width: 70px;
-    height: 70px;
+    font-size: 40px;
+    color:  #d8d8d8;
+    text-align: center;
 }
 .author_name{
     display: block;
@@ -433,6 +452,7 @@ body{
 .section__answers{
     background-color: #f7f7f7;
     padding: 60px 0;
+    border-bottom: 1px solid #d8d8d8;
 }
 .answer_separator{
     max-width: 329px;
@@ -467,6 +487,7 @@ body{
 .section__contact_form{
     background-color: #ffffff;
     padding: 60px 0;
+    border-bottom: 1px solid #d8d8d8;
 }
 .contactform_wrapper{
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
@@ -585,16 +606,22 @@ body{
     background-color: #f7f7f7;
 }
 .gallery_grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 .gallery_item{
      border:  1px solid transparent;
+    box-sizing: border-box;
+    width: 25%;
 }
 .gallery_link{
     outline:0;
 }
 .gallery_img{
+    display: block;
     width: 100%;
 }
 .footer{
