@@ -87,6 +87,7 @@ body{
     vertical-align:top;
 }
 .header_top_container{
+    margin-top: 5vh;
 	display:flex;
     justify-content: flex-end;
     
@@ -107,7 +108,7 @@ body{
 }
 
 .header_main{
-    margin-top: 1vh;
+    margin-top: 5vh;
 }
 .logo_link{
     display: table;
@@ -124,7 +125,7 @@ body{
 }
 .header_title{
     text-align: center;
-    margin-top: 5vh;
+    margin-top: 1vh;
     font-family: "PT Sans";
     font-size: 70px;
     font-weight: 700;
@@ -154,11 +155,11 @@ body{
 
 .header_button_down{
     display: block;
-    margin: 4vh 0 0;
+   // margin: 4vh 0 0;
 }
 .icondown{
     position: absolute;
-    bottom: 20px;
+    top:90vh;
     left: calc(50% - 40px);
      display: block;
     margin: 0 auto;
@@ -247,6 +248,7 @@ body{
 .section__features{
     background-color: #f7f7f7;
     padding: 65px 0;
+     border-bottom: 1px solid #d8d8d8;
 }
 .features_title{
 }
@@ -565,12 +567,17 @@ body{
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     background-color: #d7d7d7;
+    transition: all 0.5s ease;
    
 }
 .sendform_radio{
      position: absolute;
     visibility: hidden;
-    
+     
+    &:hover ~ .check .inside{
+        box-shadow: 0 0 13px rgba(252, 71, 62, 0.69);
+        background-color: #fc473e;
+    }
     
     &:checked ~ .check{
         box-shadow: 0 0 13px rgba(252, 71, 62, 0.69);
