@@ -159,7 +159,7 @@ body{
 }
 .icondown{
     position: absolute;
-    top:90vh;
+    bottom:calc(10vh - 40px);
     left: calc(50% - 40px);
      display: block;
     margin: 0 auto;
