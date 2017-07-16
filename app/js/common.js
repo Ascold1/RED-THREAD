@@ -7,8 +7,8 @@ $(document).ready(function(){
        slidesToShow: 2,
        slidesToScroll: 1,
        arrows: true,
-       prevArrow:'<img src="img/prev.png" alt="<" class="slick-prev" >',
-       nextArrow:'<img src="img/next.png" alt="<" class="slick-next">',
+       prevArrow:'<img src="/assets/redthread/img/prev.png" alt="<" class="slick-prev" >',
+       nextArrow:'<img src="/assets/redthread/img/next.png" alt="<" class="slick-next">',
        responsive: [
             {
               breakpoint: 1024,
