@@ -106,9 +106,9 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 gulp.task('deploy', function() {
 
 	var conn = ftp.create({
-		host:      'hostname.com',
-		user:      'username',
-		password:  'userpassword',
+		host:      'p381104.ftp.ihc.ru',
+		user:      'p381104_misha',
+		password:  'Q56i9ZibY4',
 		parallel:  10,
 		log: gutil.log
 	});
@@ -118,7 +118,7 @@ gulp.task('deploy', function() {
 	'dist/.htaccess',
 	];
 	return gulp.src(globs, {buffer: false})
-	.pipe(conn.dest('/path/to/folder/on/server'));
+	.pipe(conn.dest('/www/1.ironstakes.com'));
 
 });
 
